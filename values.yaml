@@ -118,12 +118,12 @@ env:
   - name: CLIENT_ID
     valueFrom:
       secretKeyRef:
-        name: envmount
+        name: blizz-clientid
         key: CLIENT_ID
   - name: CLIENT_SECRET
     valueFrom:
       secretKeyRef:
-        name: envmount
+        name: blizz-clientid
         key: CLIENT_SECRET
 
 # Additional volumeMounts on the output Deployment definition.
