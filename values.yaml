@@ -107,16 +107,9 @@ autoscaling:
 # Additional volumes on the output Deployment definition.
 volumes: [
   {
-    name: "CLIENT_ID",
+    name: "envmount",
     secret: {
       secretName: "blizz-clientid",
-      optional: false
-    }
-  },
-  {
-    name: "CLIENT_SECRET",
-    secret: {
-      name: "blizz-secret",
       optional: false
     }
   }
