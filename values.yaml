@@ -107,14 +107,14 @@ autoscaling:
 # Additional volumes on the output Deployment definition.
 volumes: [
   {
-    name: "BLIZZ_CLIENTID",
+    name: "CLIENT_ID",
     secret: {
       secretName: "blizz-clientid",
       optional: false
     }
   },
   {
-    name: "BLIZZ_SECRET",
+    name: "CLIENT_SECRET",
     secret: {
       name: "blizz-secret",
       optional: false
