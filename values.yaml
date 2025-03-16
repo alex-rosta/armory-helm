@@ -85,6 +85,11 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+redis:
+  enabled: true
+  image: redis:latest
+  port: 6379
+  hostname: redis
 # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 livenessProbe:
   httpGet:
@@ -124,6 +129,21 @@ env:
       secretKeyRef:
         name: blizz-clientid
         key: CLIENT_SECRET
+  - name: REDIS_ADDR
+    valueFrom:
+      secretKeyRef:
+        name: blizz-clientid
+        key: REDIS_ADDR
+  - name: REDIS_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: blizz-clientid
+        key: REDIS_PASSWORD
+  - name: REDIS_DB
+    valueFrom:
+      secretKeyRef:
+        name: blizz-clientid
+        key: REDIS_DB
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts: []
