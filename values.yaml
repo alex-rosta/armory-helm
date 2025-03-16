@@ -134,11 +134,6 @@ env:
       secretKeyRef:
         name: blizz-clientid
         key: REDIS_ADDR
-  - name: REDIS_PASSWORD
-    valueFrom:
-      secretKeyRef:
-        name: blizz-clientid
-        key: REDIS_PASSWORD
   - name: REDIS_DB
     valueFrom:
       secretKeyRef:
