@@ -139,6 +139,11 @@ env:
       secretKeyRef:
         name: blizz-clientid
         key: REDIS_DB
+  - name: WARCRAFTLOGS_API_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: blizz-clientid
+        key: WARCRAFTLOGS_API_TOKEN
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts: []
